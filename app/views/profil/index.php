@@ -28,33 +28,42 @@
     </div>
   </nav>
 </header>
-<div class="container py-5">
-    <div class="p-5 mb-4 bg-light rounded-3 jumbotron">
-      <div class="container-fluid py-5">
-        <br>
-        <h1 class="display-5 fw-bold">Jenis Batik Produksi Batik Nation</h1>
-        <p class="col-md-8 fs-4">Berikut adalah daftar batik yang di produksi di Batik Nation.</p>
-        <button class="btn btn-warning btn-lg" type="button">Example button</button>
+<!-- content -->
+<div class="container col-xxl-8 py-5 bg-light">
+    <div class="p-2 mb-4 bg-light rounded-3 jumbotron-profil">
+      <div class="container-fluid text-center py-5">
+        <div class="row">
+          <div class="col-lg-4">
+
+          </div>
+          <div class="col-lg-4 text-white">
+            <img class="rounded-circle shadow" src="<?= BASEURL; ?>/img/profile.png" width="140" height="140" alt="">
+            <h2><?= $_SESSION['data']['customer']['nama'] ?></h2>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+
+          </div>
+        </div>
       </div>
     </div>
-
-    <hr class="featurette-divider">
-    <?php foreach ($data['batik'] as $batik) { ?>
-
-      <div class="row flex-lg align-items-center g-5 py-5">
-        <div class="col-md-7">
-          <h2 class="featurette-heading"><?= $batik['jenis']; ?><span class="text-muted"> Batik Nation.</span></h2>
-          <p class="lead"><?= $batik['deskripsi']; ?>.</p>
+    <div class="text-center text-warning">
+      <h1>Data Profil</h1>
+    </div>
+    <hr>
+    <div class="mb-3 row">
+      <?php foreach ($_SESSION['data']['customer'] as $key => $value) : ?>
+        <?php if ($key == 'id_customer') : ?>
+          <?php continue; ?>
+        <?php endif ?>
+        <label for="staticEmail" class="col-sm-2 col-form-label"><?= ucwords($key); ?></label>
+        <div class="col-sm-10">
+          <input type="<?php echo ($key == 'password') ? "password" : 'text'; ?>" readonly class="form-control-plaintext bg-white mb-2 rounded px-3" id="staticEmail" value="<?= $value; ?>">
         </div>
-        <div class="col-md-5">
-          <img src="<?= BASEURL; ?>/img/<?= $batik['gambar']; ?>" class="shadow" width="500" alt="megamendung.jpg">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-    <?php } ?>
-
-    <footer class="pt-3 mt-4 text-muted border-top">
-      &copy; 2021
-    </footer>
-  </div>
+    <?php endforeach ?>
+    <p class="mt-3"><a class="btn btn-lg btn-warning" href="<?= BASEURL; ?>/profil/edit">Edit Profile</a></p>
+    </div>
+    <hr>
+    <div class="text-center text-warning">
+      <h1>Riwayat Pemesanan</h1>
+    </div>
+</div>

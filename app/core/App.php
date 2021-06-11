@@ -2,7 +2,7 @@
 
 class App {
   // attribut ini digunakan sebagai controller,method,parameter default
-  protected $controller = 'Login_Customer';
+  protected $controller = 'home';
   protected $method = 'index';
   protected $params = [];
 

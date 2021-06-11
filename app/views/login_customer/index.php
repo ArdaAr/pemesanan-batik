@@ -1,5 +1,5 @@
 <div class="container">
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand">Batik Nation</a>
       <a class="btn btn-warning" href="<?= BASEURL; ?>/register">Register</a>

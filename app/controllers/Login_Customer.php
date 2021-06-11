@@ -39,4 +39,14 @@ class Login_Customer extends Controller
       header('Location:'.BASEURL.'/');
     }
   }
+
+  public function doLogout()
+  {
+    session_start();
+    session_unset();
+    session_destroy();
+    // setcookie("uid","", time()-60);
+    header('Location:'.BASEURL.'/login_customer');
+    exit;
+  }
 }

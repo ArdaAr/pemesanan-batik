@@ -10,6 +10,19 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>/home">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>/product">Product</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+            </a>
+            <ul class="dropdown-menu active" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="<?= BASEURL; ?>/Profil">My Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="<?= BASEURL; ?>/Login_Customer/doLogout">Logout</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>

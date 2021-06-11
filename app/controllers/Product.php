@@ -9,9 +9,9 @@ class Product extends Controller
   function index()
   {
     $data['judul'] = 'Product';
-    // $data['nama'] = $this->model('User_model')->getUser();
+    $data['batik'] = $this->model('Product_model')->getDataBatik();
     $this->view('templates/header', $data);
-    $this->view('product/index');
+    $this->view('product/index', $data);
     $this->view('templates/footer');
   }
 }

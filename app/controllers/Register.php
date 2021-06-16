@@ -18,8 +18,15 @@ class Register extends Controller
   public function tambahData()
   {
     // var_dump($_POST);
-    if ($this->model('Customer_model')->tambahDataCustomer($_POST) > 0) {
-      header('Location:'.BASEURL.'/login_customer');
-    };
+    if ($_POST['nama'] and ($_POST['email'] and ($_POST['passwd'] and ($_POST['telp'] and ($_POST['alamat']))))) {
+      // echo 'ada nama';
+      if ($this->model('Customer_model')->tambahDataCustomer($_POST) > 0) {
+        Message::setMessage('Register Berhasil');
+        header('Location:'.BASEURL.'/register');
+      }
+    }else {
+      Message::setMessage('Data Tidak Boleh Kosong !');
+      header('Location:'.BASEURL.'/register');
+    }
   }
 }

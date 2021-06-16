@@ -1,3 +1,6 @@
+<div class="message" data-message="<?= Message::setSweetAlert(); ?>">
+</div>
+<?php unset($_SESSION['message']); ?>
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
     <div class="container-fluid">
@@ -38,7 +41,7 @@
           </div>
           <div class="col-lg-4 text-white">
             <img class="rounded-circle shadow" src="<?= BASEURL; ?>/img/profile.png" width="140" height="140" alt="">
-            <h2><?= $_SESSION['data']['customer']['nama'] ?></h2>
+            <h2 class="bg-kuning my-2 rounded-pill p-1"><?= $_SESSION['data']['customer']['nama']; ?></h2>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
 
@@ -46,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="text-center text-warning">
+    <div class="text-center text-kuning">
       <h1>Data Profil</h1>
     </div>
     <hr>
@@ -63,7 +66,30 @@
     <p class="mt-3"><a class="btn btn-lg btn-warning" href="<?= BASEURL; ?>/profil/edit">Edit Profile</a></p>
     </div>
     <hr>
-    <div class="text-center text-warning">
+    <div class="text-center text-kuning">
       <h1>Riwayat Pemesanan</h1>
+    </div>
+    <div class="row g-3">
+      <?php if (count($data['pesanan']) != 0) { ?>
+        <?php foreach ($data['pesanan'] as $pesanan) {?>
+          <div class="col-md-6">
+            <div class="card text-start">
+              <div class="card-body">
+                <h4>Batik Pesanan : <span class="badge bg-coklat"><?= $pesanan['jenis']; ?></span></h4>
+                <p>Pemesan : <?= $pesanan['nama']; ?></p>
+                <p>Jumlah : <?= $pesanan['jumlah']; ?></p>
+                <p>Total harga : <?= $pesanan['harga']; ?></p>
+                <p>Tanggal Pesanan : <?= $pesanan['dates']; ?></p>
+              </div>
+            </div>
+          </div>
+          <br>
+        <?php } ?>
+      <?php }else {?>
+        <div class="mb-3 text-center text-kuning">
+          <img src="<?= BASEURL; ?>/img/empty.png" class="rounded mx-auto d-block emptypic" width="400px" alt="">
+          <p class="fs-4">Belum ada pesanan :(</p>
+        </div>
+      <?php } ?>
     </div>
 </div>

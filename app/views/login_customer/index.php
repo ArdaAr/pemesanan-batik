@@ -1,15 +1,20 @@
-<div class="container">
-  <nav class="navbar navbar-light">
-    <div class="container-fluid">
-      <a class="navbar-brand">Batik Nation</a>
-      <a class="btn btn-warning" href="<?= BASEURL; ?>/register">Register</a>
-    </div>
-  </nav>
+<div class="bg-nav">
+  <div class="container">
+    <nav class="navbar navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold">Batik Nation</a>
+        <div class="">
+          <a href="<?= BASEURL; ?>/login_admin" class="btn btn-light text-coklat fw-bold mx-2">Admin Login</a>
+          <a class="btn btn-light text-coklat fw-bold" href="<?= BASEURL; ?>/register">Register</a>
+      </div>
+      </div>
+    </nav>
+  </div>
 </div>
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
     <div class="row align-items-center g-lg-5 py-5">
       <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Pesan batik sesuai dengan keinginanmu</h1>
+        <h1 class="display-4 fw-bold lh-1 mb-3 text-coklat">Pesan batik sesuai dengan keinginanmu</h1>
         <p class="col-lg-10 fs-4">Platform pemesanan batik online dengan spesifikasi yang anda tentukan sendiri hanya di batik nation.</p>
       </div>
       <div class="col-md-10 mx-auto col-lg-5">

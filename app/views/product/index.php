@@ -32,18 +32,17 @@
     <div class="p-5 mb-4 bg-light rounded-3 jumbotron">
       <div class="container-fluid py-5">
         <br>
-        <h1 class="display-5 fw-bold">Jenis Batik Produksi Batik Nation</h1>
-        <p class="col-md-8 fs-4">Berikut adalah daftar batik yang di produksi di Batik Nation.</p>
-        <button class="btn btn-warning btn-lg" type="button">Example button</button>
+        <h1 class="display-5 fw-bold text-coklat">Jenis Batik Produksi Batik Nation</h1>
+        <p class="col-md-8 fs-4 text-coklat">Berikut adalah daftar batik yang di produksi di Batik Nation.</p>
+        <a class="btn btn-warning btn-lg" href="<?= BASEURL; ?>/pesan" type="button">Pesan Sekarang</a>
       </div>
     </div>
 
     <hr class="featurette-divider">
     <?php foreach ($data['batik'] as $batik) { ?>
-
       <div class="row flex-lg align-items-center g-5 py-5">
         <div class="col-md-7">
-          <h2 class="featurette-heading"><?= $batik['jenis']; ?><span class="text-muted"> Batik Nation.</span></h2>
+          <h2 class="featurette-heading text-coklat"><span class="text-muted"> Batik </span><?= $batik['jenis']; ?></h2>
           <p class="lead"><?= $batik['deskripsi']; ?>.</p>
         </div>
         <div class="col-md-5">

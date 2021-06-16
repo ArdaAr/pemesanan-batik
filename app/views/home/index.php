@@ -1,3 +1,6 @@
+<div class="message" data-message="<?= Message::setSweetAlert(); ?>">
+</div>
+<?php unset($_SESSION['message']); ?>
 <header>
   <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
     <div class="container-fluid">
@@ -28,9 +31,9 @@
     </div>
   </nav>
 </header>
-<br><br><br>
+<br><br>
 <main>
-  <div class="container">
+  <!-- <div class="container"> -->
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -44,11 +47,11 @@
         <div class="container">
           <div class="carousel-caption text-start">
             <h1>Batik Nation.</h1>
-            <p>Ingin pesan batik tak perlu repot datang ke toko atau butik, anda dirumah <br>
+            <h5>Ingin pesan batik tak perlu repot datang ke toko atau butik, anda dirumah <br>
                 saja, batik pesanan anda akan sampai ke rumah anda.<br>
                 Ayo pesan sekarang!
-                .</p>
-            <p><a class="btn btn-lg btn-warning" href="<?= BASEURL; ?>/pesan">Pesan Sekarang</a></p>
+                .</h5>
+            <p><a class="btn btn-lg btn-warning text-coklat" href="<?= BASEURL; ?>/pesan">Pesan Sekarang</a></p>
           </div>
         </div>
       </div>
@@ -56,9 +59,8 @@
         <img src="<?= BASEURL; ?>/img/batik21.png" class="d-block w-100" alt="...">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-warning" href="#">Learn more</a></p>
+            <h1>Pembatik Asli Daerah Tuban</h1>
+            <h5>Semua batik di kerjakan oleh pembatik asli daerah tuban yang telah berpengalaman membatik selama bertahun-tahun.</h5>
           </div>
         </div>
       </div>
@@ -66,9 +68,9 @@
         <img src="<?= BASEURL; ?>/img/batik.jpg" class="d-block w-100" alt="...">
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-warning" href="#">Browse gallery</a></p>
+            <h1>Produk Original.</h1>
+            <h5>Produk Batik Nation asli dikerjakan dengan teknik membatik tradisional dan tidak ada manipulasi.</h5>
+            <p><a class="btn btn-lg btn-warning text-coklat" href="<?= BASEURL; ?>/product">Lihat Produk</a></p>
           </div>
         </div>
       </div>
@@ -82,7 +84,7 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-</div>
+<!-- </div> -->
   <br><br><br><br>
 
 
@@ -96,17 +98,17 @@
     <div class="row justify-content-center">
       <div class="col-lg-4 text-center">
         <img src="<?= BASEURL; ?>/img/info1.png" class="" alt="">
-        <h2>Mengumpulkan Informasi</h2>
+        <h2 class="text-coklat py-2 fw-bold">Mengumpulkan Informasi</h2>
         <p>Kami mengumpulkan informasi detail tentang batik pesanan anda.</p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4 text-center">
-        <img src="<?= BASEURL; ?>/img/process.png" alt="">
-        <h2>Proses Pembuatan</h2>
+        <img src="<?= BASEURL; ?>/img/process.png" class="" alt="">
+        <h2 class="text-coklat py-2 fw-bold">Proses Pembuatan</h2>
         <p>Kami memproses pesanan anda dengan waktu yang telah disepakati.</p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4 text-center">
-        <img src="<?= BASEURL; ?>/img/kirim1.png" alt="">
-        <h2>Pengiriman</h2>
+        <img src="<?= BASEURL; ?>/img/kirim1.png" class="" alt="">
+        <h2 class="text-coklat py-2 fw-bold">Pengiriman</h2>
         <p>Kami mengirimkan pesanan anda ke alamat yang telah diberikan.</p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
@@ -122,11 +124,10 @@
           <img src="<?= BASEURL; ?>/img/delivery.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
         </div>
         <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3">Pengiriman Batik Instan</h1>
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-coklat">Pengiriman Batik Instan</h1>
           <p class="lead">Batik Nation menggunakan jasa pengiriman dari ekspedisi yang bekerja sama dengan toko, dengan ini toko bisa menjangkau pelanggan lebih luas lagi, jangan khawatir... keamanan barang tetap terjaga dari tangan penjual sampai ke tangan pembeli.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-warning btn-lg px-4 me-md-2">Primary</button>
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+            <a type="button" class="btn btn-warning btn-lg px-4 me-md-2" href="<?= BASEURL; ?>/product">Pesan Sekarang</a>
           </div>
         </div>
       </div>
@@ -138,10 +139,82 @@
 
   </div><!-- /.container -->
 
+  <div class="container">
+
+    <div class="row g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+
+      </div>
+    </div>
+
+  </div>
+
 
   <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-</main>
+  <footer class="text-center text-white py-3" style="background-color: #f1f1f1;">
+  <h1 class="text-coklat">Hubungi Kami <span><i class="fa fa-paper-plane text-coklat fs-1" aria-hidden="true"></i></span></h1>
+  <p class="text-dark">Hubungi kami jika anda ingin berkonsultasi atau komplain tentang pesanan<br>yang akan dibalas langsung oleh owner Batik Nation, dan ikuti juga kami di seluruh sosial media kami.</p>
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://Facebook.com"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://twitter.com"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://gmail.com"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://instagram.com"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://linkedin.com"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        href="https://github.com/ardaar"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fa fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <!-- Copyright -->
+</footer>

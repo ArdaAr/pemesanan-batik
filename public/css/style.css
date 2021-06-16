@@ -2,12 +2,42 @@
   height: 600px;
 }
 .btn-warning {
-  color: #fff;
-  background-color: #ffb64f;
-  border-color: #0d6efd;
+  color: #8E5032;
+  background-color: #bc7c5d;
+  /* border-color: #0d6efd; */
 }
 .btn-warning:hover {
-  color: #000;
+  color: #8E5032;
   background-color: #EC7160;
-  border-color: #ffc720;
+}
+.bg-kuning {
+  color: #fff;
+  background-color: #ffa647;
+}
+.text-kuning {
+  color: #ffa647;
+}
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+.bg-nav {
+  background: rgb(188,124,93);
+  background: linear-gradient(90deg, rgba(188,124,93,1) 0%, rgba(255,135,55,1) 100%);
+}
+.btn-coklat {
+  background-color: #ff8737;
+}
+.text-coklat {
+  color: #8E5032;
+}
+.bg-coklat {
+  background-color: #8E5032;
+}
+.bg-coklattransparan {
+  background: rgb(179,179,179);
+  background: linear-gradient(209deg, rgba(179,179,179,0.2976540958180147) 0%, rgba(243,243,243,0.4405112386751575) 100%);
+}
+.bg-customer {
+  background: rgb(159,81,13);
+  background: linear-gradient(209deg, rgba(159,81,13,0.05395661682641806) 0%, rgba(255,141,48,0.10157566444546573) 100%);
 }

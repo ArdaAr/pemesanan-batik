@@ -3,13 +3,12 @@
 /**
  *
  */
-class Bahan_model
+class Barang_model
 {
 
-  private $table = 'bahan';
+  private $table = 'jenisbarang';
   // variabel untuk menampung kelas database utama
   private $db;
-
 
   public function __construct()
   {
@@ -17,16 +16,15 @@ class Bahan_model
     $this->db = new Database;
   }
 
-  public function getDataBahan()
+  public function getDataBarang()
   {
-    $query = 'SELECT * FROM '.$this->table;
-    $this->db->query($query);
+    $this->db->query('SELECT * FROM '.$this->table);
     return $this->db->resultSet();
   }
 
-  public function getBahanById($id)
+  public function getBarangById($id)
   {
-    $this->db->query('SELECT nama,harga_bahan FROM '.$this->table.' WHERE id_bahan=:id');
+    $this->db->query('SELECT nama,harga_barang FROM '.$this->table.' WHERE id_barang=:id');
     $this->db->bind('id',$id);
     return $this->db->single();
   }

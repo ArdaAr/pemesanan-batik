@@ -16,10 +16,17 @@ class Customer_model
     $this->db = new Database;
   }
 
-  public function getAllUser()
+  public function getAllCustomer()
   {
     $this->db->query('SELECT * FROM '.$this->table);
     return $this->db->resultSet();
+  }
+
+  public function getProfilById($id)
+  {
+    $this->db->query('SELECT * FROM '.$this->table.' WHERE id_customer=:id');
+    $this->db->bind('id',$id);
+    return $this->db->single();
   }
 
   public function getDataByEmail($email)
@@ -41,6 +48,20 @@ class Customer_model
     $this->db->bind('passwd',$data['passwd']);
     $this->db->execute();
 
+    return $this->db->countRow();
+  }
+
+  public function editData($data,$id)
+  {
+    $query = "UPDATE ".$this->table." SET nama=:nama, alamat=:alamat, telepon=:telp, email=:email, password=:passwd WHERE id_customer=:id";
+    $this->db->query($query);
+    $this->db->bind('id',$id);
+    $this->db->bind('nama',$data['editnama']);
+    $this->db->bind('alamat',$data['editalamat']);
+    $this->db->bind('telp',$data['edittelp']);
+    $this->db->bind('email',$data['editemail']);
+    $this->db->bind('passwd',$data['editpasswd']);
+    $this->db->execute();
     return $this->db->countRow();
   }
 
